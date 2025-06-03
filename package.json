@@ -1,0 +1,49 @@
+{
+  "name": "yen-sao-kim-yen",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@heroui/breadcrumbs": "^2.2.7",
+    "@heroui/react": "^2.6.14",
+    "@heroui/system": "^2.4.7",
+    "@heroui/table": "^2.2.9",
+    "@heroui/theme": "^2.4.12",
+    "@radix-ui/react-select": "^2.1.6",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.4.3",
+    "i18next": "^24.2.2",
+    "lucide-react": "^0.475.0",
+    "next": "^15.1.3",
+    "next-auth": "^5.0.0-beta.25",
+    "next-i18next": "^15.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^15.4.0",
+    "shadcn": "^2.4.0-canary.9",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
