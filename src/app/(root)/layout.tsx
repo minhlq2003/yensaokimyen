@@ -8,6 +8,8 @@ import LocaleProvider from "../../components/locale-provider";
 import { i18nInstance } from "../../language/i18n";
 import { HeroUIProvider } from "@heroui/system";
 import "../../../globals.css";
+import LoadingPage from "@/src/components/loading-page";
+import PopupContact from "@/src/components/popup-contact";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,12 +37,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased font-merriweather`}
       >
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingPage />}>
           <LocaleProvider>
             {() => (
               <I18nextProvider i18n={i18nInstance}>
                 <Header />
-                <HeroUIProvider>{children}</HeroUIProvider>
+                <PopupContact />
+                <div className="mt-5 md:mt-20">
+                  <HeroUIProvider>{children}</HeroUIProvider>
+                </div>
                 <Footer />
               </I18nextProvider>
             )}

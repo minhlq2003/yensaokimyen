@@ -1,20 +1,22 @@
-// app/page.tsx
-"use client";
+"use server";
 
-import { useTranslation } from "next-i18next";
-import { Suspense } from "react";
+import Home from "@/src/components/home-page";
+import { Images } from "@/src/constant/images";
+import { Metadata } from "next";
 
-function Home() {
-  const { t } = useTranslation("common");
-
-  return (
-    <Suspense>
-      <div>
-        <h1>{t("welcome")}</h1>
-        <p>{t("language")}</p>
-      </div>
-    </Suspense>
-  );
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: `Yến Sào Kim Yến`,
+    description:
+      "Yến Sào Kim Yến - Tổ yến, yến sào chất lượng, giá cả cạnh tranh",
+    openGraph: {
+      title: `Yến Sào Kim Yến`,
+      description: "Yến Sào Kim Yến",
+      images: [{ url: Images.logo.src }],
+    },
+  };
 }
 
-export default Home;
+export default async function Page() {
+  return <Home />;
+}

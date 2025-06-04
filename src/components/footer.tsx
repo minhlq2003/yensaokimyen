@@ -1,102 +1,102 @@
 "use client";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Images } from "../constant/images";
+import {
+  faEnvelope,
+  faLocationDot,
+  faPhone,
+  faStore,
+} from "@fortawesome/free-solid-svg-icons";
+import FacebookPagePlugin from "./facebook-plugin";
 
 const Footer = () => {
   const { t } = useTranslation("common");
 
   return (
-    <footer className="bg-[#0b3d91]  text-white sm:p-10 p-3 overflow-hidden">
-      <div className="max-w-[1440px] w-full mx-auto pt-5 flex justify-between sm:flex-row flex-col">
-        <div className="text-center sm:w-1/4 w-full">
-          <h2 className="sm:text-3xl text-xl font-bold mb-4">GreatBook</h2>
-          <p className="sm:text-md text-[10px]">
-            Discover a creative world through books! We offer a vast collection
-            to suit every taste, along with special offers just for you.
+    <footer className="bg-[#a20937]  text-white sm:p-10 p-3 overflow-hidden">
+      <div className="max-w-[1200px] w-full mx-auto pt-5 flex justify-between sm:flex-row flex-col gap-6 sm:gap-4">
+        <div className="text-center sm:w-1/4 w-full flex items-center flex-col gap-3 sm:gap-5">
+          <Image src={Images.logo.src} width={167} height={83} alt="" />
+          <p className="sm:text-md text-[12px] sm:text-[14px] leading-6">
+            Điều đặc biệt làm nên và chỉ có duy nhất ở Yến Sào Kim Yến là khách
+            hàng không còn phải đau đầu chọn lựa và lo lắng về chất lượng, hiệu
+            quả hay mẫu mã của sản phẩm nữa mà vẫn có giá thành luôn tốt nhất.
+          </p>
+          <p className="text-[#ffeb95] font-bold text-[14px] sm:text-[18px]">
+            Tổ Yến - Yến Sào Kim Yến
           </p>
         </div>
-        <div className="sm:w-1/2 w-full  flex justify-between sm:text-left text-center sm:ml-5 ml-0 sm:mt-0 mt-5">
-          <div className="w-full ">
-            <h3 className="font-bold mb-4 sm:text-2xl text-sm">
-              {t("Company")}
-            </h3>
-            <a
-              href="/contact"
-              className="block sm:text-xl text-xs mb-2 hover:underline"
-            >
-              {t("Contact Us")}
-            </a>
-            <a
-              href="/about"
-              className="block sm:text-xl text-xs mb-2 hover:underline"
-            >
-              {t("About Us")}
-            </a>
-          </div>
-          <div className="w-full ">
-            <h3 className="font-bold mb-4 sm:text-2xl text-sm">
-              {t("Support")}
-            </h3>
-            <a
-              href="/privacy-policy"
-              className="block sm:text-xl text-xs mb-2 hover:underline"
-            >
-              {t("Private Policy")}
-            </a>
-            <a
-              href="/terms-of-use"
-              className="block sm:text-xl text-xs mb-2 hover:underline"
-            >
-              {t("Terms of Use")}
-            </a>
-          </div>
-          <div className="w-full ">
-            <h3 className="font-bold mb-4 sm:text-2xl text-sm">
-              {t("Account")}
-            </h3>
-            <a
-              href="/my-account"
-              className="block sm:text-xl text-xs mb-2 hover:underline"
-            >
-              {t("My Account")}
-            </a>
-            <a
-              href="/cart"
-              className="block sm:text-xl text-xs mb-2 hover:underline"
-            >
-              {t("My Cart")}
-            </a>
-          </div>
-          <div className="w-full ">
-            <h3 className="font-bold mb-4 sm:text-2xl text-sm">
-              {t("Contact")}
-            </h3>
-            <div className="flex space-x-4 sm:pl-0 pl-5">
-              <Link href="#" target="_blank" rel="noopener noreferrer">
-                <div className="facebook-icon rounded-full flex items-center justify-center">
-                  <FontAwesomeIcon
-                    icon={faFacebook}
-                    className="sm:text-3xl text-lg"
-                  />
-                </div>
-              </Link>
-              <Link href="#" target="_blank" rel="noopener noreferrer">
-                <div className="google-icon rounded-full flex items-center justify-center">
-                  <FontAwesomeIcon
-                    icon={faGoogle}
-                    className="sm:text-3xl text-lg"
-                  />
-                </div>
-              </Link>
-            </div>
-          </div>
+        <div className="text-[12px] sm:text-[14px] sm:w-1/4 w-full flex items-start flex-col gap-3 sm:gap-5">
+          <p>THÔNG TIN LIÊN HỆ</p>
+          <div className="h-[3px] bg-[#FFFFFF4D] w-[30px] "></div>
+          <p className="text-[#ffeb95] text-[11px] sm:text-[14px]">
+            <FontAwesomeIcon icon={faStore} className="mr-1" /> CÔNG TY TNHH YẾN
+            SÀO KIM YẾN
+          </p>
+          <Link
+            href={"tel:0902816818"}
+            className="text-[#ffeb95] text-[11px] sm:text-[14px]"
+          >
+            <FontAwesomeIcon icon={faPhone} className="mr-1" /> Hotline: 0902
+            816 818
+          </Link>
+          <Link
+            href={"mailTo:yensaokimyen@gmail.com"}
+            className="text-[#ffeb95] text-[11px] sm:text-[14px]"
+          >
+            <FontAwesomeIcon icon={faEnvelope} className="mr-1" /> CSKH:
+            yensaokimyen@gmail.com
+          </Link>
+          <Link
+            href={
+              "https://www.google.com/maps/place/Y%E1%BA%BFn+s%C3%A0o+Kim+Y%E1%BA%BFn/@9.6985465,106.2628203,19.05z/data=!4m14!1m7!3m6!1s0x31a03b8a960e6031:0x74cb3e82a7775c6e!2zWeG6v24gc8OgbyBLaW0gWeG6v24!8m2!3d9.6980083!4d106.2641017!16s%2Fg%2F11p_0n0fks!3m5!1s0x31a03b8a960e6031:0x74cb3e82a7775c6e!8m2!3d9.6980083!4d106.2641017!16s%2Fg%2F11p_0n0fks?hl=vi&entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D"
+            }
+            className="text-[#ffeb95] text-[11px] sm:text-[14px]"
+          >
+            <FontAwesomeIcon icon={faLocationDot} className="mr-1" /> Địa chỉ:
+            Yến Sào Kim Yến, TT. Trà Cú, Trà Cú, Trà Vinh
+          </Link>
+        </div>
+        <div className="text-[12px] sm:text-[14px] sm:w-1/4 w-full flex items-start flex-col gap-3 sm:gap-5">
+          <p>HỖ TRỢ</p>
+          <div className="h-[3px] bg-[#FFFFFF4D] w-[30px] "></div>
+          <Link
+            href={"/"}
+            className="text-[#ffeb95] text-[11px] sm:text-[14px]"
+          >
+            Liên hệ
+          </Link>
+          <Link
+            href={"/"}
+            className="text-[#ffeb95] text-[11px] sm:text-[14px]"
+          >
+            Câu hỏi thường gặp
+          </Link>
+          <Link
+            href={"/"}
+            className="text-[#ffeb95] text-[11px] sm:text-[14px]"
+          >
+            Hướng dẫn thanh toán
+          </Link>
+          <Link
+            href={"/"}
+            className="text-[#ffeb95] text-[11px] sm:text-[14px]"
+          >
+            Chính sách đổi trả
+          </Link>
+          <Image src={Images.chungnhan.src} width={270} height={65} alt="" />
+        </div>
+        <div className="text-[14px] sm:w-1/4 w-full flex items-start flex-col gap-3 sm:gap-5">
+          <FacebookPagePlugin />
         </div>
       </div>
-      <div className="text-center mt-8 text-sm sm:mb-0 mb-20">
-        <p>Copyright © 2024. All rights reserved.</p>
+      <div className="text-center mt-8 text-[12px] sm:text-sm sm:mb-0 mb-5 text-[#ffeb95]">
+        <p>Copyright © 2025. Lý Quốc Minh.</p>
       </div>
     </footer>
   );
